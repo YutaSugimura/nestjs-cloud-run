@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Hello {
+  title: String!
+  description: String!
+}
+
+type Query {
+  hello: Hello!
+}
