@@ -45,7 +45,7 @@ yarn start:dev
 yarn start:prod
 ```
 
-## Deploy to Cloud Run
+## Deploy to Cloud Run (Manually)
 
 ```zsh
 gcloud run deploy nest-cloud-run --source . --region us-central1 --max-instances 10 --memory 256Mi --cpu 1 --set-env-vars DESCRIPTION="env-var is set correctly"
@@ -65,6 +65,10 @@ query Hello {
   }
 }
 ```
+
+## reference
+
+https://github.com/google-github-actions/deploy-cloudrun
 
 ## License
 
