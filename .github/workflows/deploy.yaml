@@ -47,7 +47,7 @@ jobs:
           service: ${{ env.SERVICE_NAME }}
           image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}
           region: '${{ env.REGION }}'
-          flags: '--cpu ${{ env.CPU }} --memory ${{ env.MEMORY }} --max-instances ${{ env.MAX_INSTANCES }}'
+          flags: '--cpu ${{ env.CPU }} --memory ${{ env.MEMORY }} --max-instances ${{ env.MAX_INSTANCES }} --no-allow-unauthenticated'
           env_vars: 'DESCRIPTION="${{ env.DESCRIPTION }}"'
 
       - name: Show Output
