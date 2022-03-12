@@ -45,12 +45,6 @@ yarn start:dev
 yarn start:prod
 ```
 
-## Deploy to Cloud Run (Manually)
-
-```zsh
-gcloud run deploy nest-cloud-run --source . --region us-central1 --max-instances 10 --memory 256Mi --cpu 1 --set-env-vars DESCRIPTION="env-var is set correctly"
-```
-
 ### Graphql
 
 ```zsh
@@ -66,8 +60,21 @@ query Hello {
 }
 ```
 
-## reference
+## Deploy to Cloud Run (Manually)
 
+```zsh
+gcloud run deploy nest-cloud-run --source . --region us-central1 --max-instances 10 --memory 256Mi --cpu 1 --set-env-vars DESCRIPTION="env-var is set correctly"
+```
+
+## Add the following secrets to your repository's secrets
+
+- GCP_PROJECT
+- GCP_CREDENTIALS
+- SERVICE_NAME
+
+## references
+
+https://github.com/google-github-actions/setup-gcloud#service-account-key-json
 https://github.com/google-github-actions/deploy-cloudrun
 
 ## License
