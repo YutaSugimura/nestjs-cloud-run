@@ -48,7 +48,7 @@ jobs:
           image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}
           region: '${{ env.REGION }}'
           flags: '--cpu ${{ env.CPU }} --memory ${{ env.MEMORY }} --max-instances ${{ env.MAX_INSTANCES }} --allow-unauthenticated'
-          env_vars: 'DESCRIPTION="${{ env.DESCRIPTION }}"'
+          env_vars: 'DESCRIPTION=${{ env.DESCRIPTION }}'
 
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
